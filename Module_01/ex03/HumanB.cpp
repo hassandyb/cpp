@@ -3,25 +3,24 @@
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : name(name), weapon(NULL)
+HumanB::HumanB(std::string name)
 {
-    
+
+    this->name = name;
+    this->weapon = NULL;
 }
 
-void HumanB::ft_setweapon_for_b(Weapon *new_weapon)
+void HumanB::setWeapon(Weapon &weapon_ref)
 {
-    this->weapon = new_weapon;
+    this->weapon = &weapon_ref;
 }
 
 void HumanB::attack()
 {
     if(this->weapon == NULL)
-        std::cout << this->name << " is unarmed, so he must run!" << std::endl;
+        std::cout << this->name << " is unarmed." << std::endl;
     else
-    {
-        std::cout << this->name << " attacks with their ";
-        std::cout << this->weapon->getType() << std::endl;
-    }
-    
+        std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
 }
+
 
