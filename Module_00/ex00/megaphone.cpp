@@ -1,36 +1,37 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/21 13:29:15 by hed-dyb           #+#    #+#             */
+/*   Updated: 2023/11/21 13:41:16 by hed-dyb          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <iostream>
-
-using std::cout;
 
 void    ft_toupper(char *str)
 {
     int j = 0;
     while(str && str[j])
     {
-        if(str[j] >= 'a' && str[j] <= 'z')
-        {
-            str[j] = str[j] - 32;
-            cout << str[j];
-        }
-        else
-            cout << str[j];
+        std::cout << static_cast<char>(std::toupper(str[j]));
         j++;
     }
 }
 
 int main (int argc, char **argv)
 {
-    int i;
+	int i;
 
     i = 1;
     if(argc == 1)
     {
-        cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
         return 0;
     }
-
     else
     {
         while(argv && argv[i])
@@ -38,7 +39,9 @@ int main (int argc, char **argv)
             ft_toupper(argv[i]);
             i++;
         }
-        cout << "\n";
+        std::cout << "\n";
     }
     
 }
+
+
