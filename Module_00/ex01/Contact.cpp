@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:32:43 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/21 22:10:23 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/22 17:38:27 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,9 @@ void ft_desplay_alined(string str)
         
     else if(i < 10)
     {
-        cout << str;
         for (int j = 0; j < 10 - i; j++)
             cout << " ";
+        cout << str;
     }
     else
     {
@@ -104,13 +104,13 @@ void ft_desplay_alined(string str)
 
 void Contact::ft_show_info()
 {
-    cout << this->getindex() << "|";
+    cout << "         "<<this->getindex() << "|";
     ft_desplay_alined(this->getfirstname());
     cout << "|";
     ft_desplay_alined(this->getlastname());
     cout << "|";
     ft_desplay_alined(this->getnickname());
-    cout << endl;
+    cout << "|" << endl;
 }
 
 void Contact::ft_show_full_info()

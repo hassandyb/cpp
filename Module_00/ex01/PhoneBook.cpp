@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:29:26 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/21 22:09:32 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/23 17:06:12 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,26 @@ void PhoneBook::ft_add()
     string secret;
     
     cout << "Enter the first name : ";
-    getline(cin, first);
+    if(!getline(cin, first))
+        exit(0);
     cout << "Enter the last name : ";
-    getline(cin, last);
+    if(!getline(cin, last))
+        exit (0);
     cout << "Enter the nickname : ";
-    getline(cin, nick);
+    if(!getline(cin, nick))
+        exit (0);
     cout << "Enter the phone number : ";
-    getline(cin, phone);
+    if(!getline(cin, phone))
+        exit (0);
     cout << "Enter the darkest secret : ";
-    getline(cin, secret);
+    if(!getline(cin, secret))
+        exit (0);
 
     if(first == "" || last == "" || nick == "" || phone == "" || secret == "")
+    {
+        cout << endl << "Contact not regestered, please full all fields." << endl;
         return ;
+    }
 
     this->data[count].setfirstname(first);
     this->data[count].setlastname(last);
@@ -118,14 +126,19 @@ int main ()
     ft_welcome();
 
 
-    while(getline(cin, command))
+    while(1)
     { 
+        cout<<"Enter command: ";
+        if(!getline(cin, command))
+                exit(0);
         if(command.compare("ADD") == 0)
             book.ft_add();
-        if(command.compare("SEARCH") == 0)
+        else if(command.compare("SEARCH") == 0)
             book.ft_search();
-        if(command.compare("EXIT") == 0)
-            return (0);   
+        else if(command.compare("EXIT") == 0)
+            return (0);
+        else
+            cout<<"Command not found"<<endl; 
      }
 
 }
