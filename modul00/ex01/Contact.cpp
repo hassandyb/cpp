@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:32:43 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/25 14:55:58 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/25 15:33:41 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,27 @@ void Contact::setindex(int idx)
     this->index = idx;
 }
 
-void Contact::setfirstname(string str)
+void Contact::setfirstname(std::string str)
 {
     this->firstname = str;
 }
 
-void Contact::setlastname(string str)
+void Contact::setlastname(std::string str)
 {
     this->lastname = str;
 }
 
-void Contact::setnickname(string str)
+void Contact::setnickname(std::string str)
 {
     this->nickname = str;
 }
 
-void Contact::setnumber(string str)
+void Contact::setnumber(std::string str)
 {
     this->phonenumber = str;
 }
 
-void Contact::setsecret(string str)
+void Contact::setsecret(std::string str)
 {
     this->darkestsecret = str;
 }
@@ -48,27 +48,27 @@ int Contact::getindex()
     return (this->index);
 }
 
-string Contact::getfirstname()
+std::string Contact::getfirstname()
 {
     return (this->firstname);
 }
 
-string Contact::getlastname()
+std::string Contact::getlastname()
 {
     return (this->lastname);
 }
 
-string Contact::getnickname()
+std::string Contact::getnickname()
 {
     return (this->nickname);
 }
 
-string Contact::getnumber()
+std::string Contact::getnumber()
 {
     return (this->phonenumber);
 }
 
-string Contact::getsecret()
+std::string Contact::getsecret()
 {
     return (this->darkestsecret);
 }
@@ -81,7 +81,7 @@ int Contact::ft_check_empty()
 
 }
 
-void ft_desplay_alined(string str)
+void ft_desplay_alined(std::string str)
 {
     int i = str.length();
 
@@ -107,15 +107,15 @@ void Contact::ft_show_info()
     ft_desplay_alined(this->getlastname());
     std::cout << "|";
     ft_desplay_alined(this->getnickname());
-    std::cout << "|" << endl;
+    std::cout << "|" << std::endl;
 }
 
 void Contact::ft_show_full_info()
 {
-    std::cout << "index          : " << this->getindex() << endl;
-    std::cout << "First name     : " << this->getfirstname() << endl;
-    std::cout << "Last name      : " << this->getlastname() << endl;
-    std::cout << "Nick name      : " << this->getnickname() << endl;
-    std::cout << "Phone number   : " << this->getnumber() << endl;
-    std::cout << "darkest secret : " << this->getsecret() << endl;
+    std::cout << "index          : " << this->getindex() << std::endl;
+    std::cout << "First name     : " << this->getfirstname() << std::endl;
+    std::cout << "Last name      : " << this->getlastname() << std::endl;
+    std::cout << "Nick name      : " << this->getnickname() << std::endl;
+    std::cout << "Phone number   : " << this->getnumber() << std::endl;
+    std::cout << "darkest secret : " << this->getsecret() << std::endl;
 }
