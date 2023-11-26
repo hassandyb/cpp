@@ -25,6 +25,7 @@ int main ()
 	test a(23);
 	test b(0);
 
+	//copy inis
 	b = a;//assignement operator
 	// test b(a);//copy constructor
 
