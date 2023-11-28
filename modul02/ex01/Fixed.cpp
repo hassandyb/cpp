@@ -6,10 +6,9 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 15:50:23 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/28 12:35:37 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/28 12:56:53 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "Fixed.hpp"
 
@@ -34,19 +33,23 @@ Fixed::Fixed(const float value)
 	this->value = roundf(value * (1 << frac));
 }
 
+
+//copy constractor
 Fixed::Fixed(const Fixed& fixed)
 {
 	std::cout << "Copy constractor called" << std::endl;
 	this->value = fixed.value;
 }
 
-//copy constractor
+
+//copy assignation operator
 Fixed & Fixed::operator=(const Fixed &fixed) 
 {
 	std::cout << "Copy Assignation operator called" << std::endl;
 	this->value = fixed.value;
 	return *this;
 }
+
 
 //destractor
 Fixed::~Fixed()

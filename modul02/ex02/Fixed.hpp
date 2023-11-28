@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/26 16:17:13 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/28 12:56:31 by hed-dyb          ###   ########.fr       */
+/*   Created: 2023/11/28 12:55:10 by hed-dyb           #+#    #+#             */
+/*   Updated: 2023/11/28 14:58:34 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Fixed
 
 	public:
 		Fixed();
-		Fixed(const int value);// const means  value cant be changed inside the function.
+		Fixed(const int value);// const means  the function does not change the paramter value
 		Fixed(const float value);
 		float toFloat(void) const;
 		int toInt(void) const;
@@ -37,8 +37,26 @@ class Fixed
 		int getRawBits(void ) const;
 		void setRawBits( int const raw );
 
-		//--------------------------------------------
+		//comparison operators --------------------------------------------
+		bool Fixed::operator< (const Fixed &fixed);
+		bool Fixed::operator> (const Fixed &fixed);
+		bool Fixed::operator >= (const Fixed &fixed);
+		bool Fixed::operator <= (const Fixed &fixed);
+		bool Fixed::operator != (const Fixed &fixed);
+		bool Fixed::operator == (const Fixed &fixed);
 
+		//arithmetic operators: --------------------------------------------
+		Fixed Fixed::operator + (const Fixed &fixed);
+		Fixed Fixed::operator - (const Fixed &fixed);
+		Fixed Fixed::operator * (const Fixed &fixed);
+		Fixed Fixed::operator / (const Fixed &fixed);
+
+		// increment/decrement operators: --------------------------------------------
+
+		Fixed & Fixed::operator ++ (void );
+		Fixed & Fixed::operator -- (void );
+		Fixed Fixed::operator ++ (int );
+		Fixed Fixed::operator -- (int );
 
 };
 std::ostream & operator<<(std::ostream & o, Fixed const & fixed);
