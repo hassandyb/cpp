@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:55:13 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/28 14:57:33 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/28 19:22:34 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Fixed::Fixed(const float value)
 //copy constractor
 Fixed::Fixed(const Fixed& fixed)
 {
-	std::cout << "Copy constractor called" << std::endl;
+	// std::cout << "Copy constractor called" << std::endl;
 	this->value = fixed.value;
 }
 
@@ -45,7 +45,7 @@ Fixed::Fixed(const Fixed& fixed)
 //copy assignation operator
 Fixed & Fixed::operator=(const Fixed &fixed) 
 {
-	std::cout << "Copy Assignation operator called" << std::endl;
+	// std::cout << "Copy Assignation operator called" << std::endl;
 	this->value = fixed.value;
 	return *this;
 }
@@ -54,7 +54,7 @@ Fixed & Fixed::operator=(const Fixed &fixed)
 //destractor
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	// std::cout << "Destructor called" << std::endl;
 };
 
 
@@ -138,7 +138,7 @@ Fixed Fixed::operator + (const Fixed &fixed)
 {
 	Fixed result;
 	result.value = this->value + fixed.value;
-	return (result)
+	return (result);
 }
 
 Fixed Fixed::operator - (const Fixed &fixed)
@@ -148,45 +148,81 @@ Fixed Fixed::operator - (const Fixed &fixed)
 	return (result);
 }
 
-Fixed Fixed::operator * (const Fixed &fixed)
+
+
+Fixed Fixed::operator * (const Fixed &fixed) 
 {
-	Fixed result;
-	result.value = this->value * fixed.value;
-	return result;
+    Fixed result;
+    float floatResult = this->toFloat() * fixed.toFloat();
+    result.value = (floatResult * (1 << frac));
+    return result;
 }
+
+
 
 Fixed Fixed::operator / (const Fixed &fixed)
 {
 	Fixed result;
 	result.value = this->value / fixed.value;
+	return result;
 }
+
 
 // increment/decrement operators: --------------------------------------------
 
-
-
-Fixed & Fixed::operator ++ (void )	//prefix increment
-{
-	this->value++;
-	return *this;
-}
-
-Fixed & Fixed::operator -- (void )	//prefix decrement
-{
-	this->value--;
-	return *this;
-}
-
-Fixed Fixed::operator ++ (int )	//postfix increment
+Fixed Fixed::operator ++ (int )	// i++ postfix increment
 {
 	Fixed tmp(*this);
 	this->value++;
 	return tmp;
 }
 
-Fixed Fixed::operator -- (int )	//postfix decrement
+Fixed Fixed::operator -- (int )	//i-- postfix decrement
 {
 	Fixed tmp(*this);
 	this->value--;
 	return tmp;
+}
+
+Fixed & Fixed::operator ++ (void )	// ++i prefix increment
+{
+	this->value++;
+	return *this;
+}
+
+Fixed & Fixed::operator -- (void )	// --i prefix decrement
+{
+	this->value--;
+	return *this;
+}
+
+
+// min/max functions: --------------------------------------------
+
+Fixed & Fixed::min(Fixed & f1, Fixed & f2)
+{
+	if(f1.value < f2.value)
+		return f1;
+	return f2;
+}
+
+const Fixed & Fixed::min(const Fixed & f1, const Fixed & f2)
+{
+	if(f1.value < f2.value)
+		return f1;
+	return f2;
+}
+
+Fixed & Fixed::max(Fixed & f1, Fixed & f2)
+{
+	if(f1.value > f2.value)
+		return f1;
+	return f2;
+}
+
+const Fixed & Fixed::max(const Fixed & f1, const Fixed & f2)
+{
+	if(f1.value > f2.value)
+		return f1;
+	return f2;
 }
