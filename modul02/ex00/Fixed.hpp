@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 11:13:03 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/26 15:46:47 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/28 11:33:29 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class Fixed
 		~Fixed();
 
 		int getRawBits(void ) const;
+		void setRawBits( int const raw );
 		// const means cannot change any member variables.
 
 };

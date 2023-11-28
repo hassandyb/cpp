@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 11:13:00 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/26 15:47:09 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/28 11:33:58 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ int Fixed::getRawBits(void ) const
 	return this->value;
 }
 
+void setRawBits( int const raw );
+{
+	std::cout << "setRawBits member function called" << std::endl;
+	this->value = raw;
+}
 Fixed::~Fixed()
 {
 	std::cout << "Destructor called" << std::endl;
