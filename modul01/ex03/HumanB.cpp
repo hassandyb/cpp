@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 10:33:29 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/29 19:51:13 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/30 15:57:00 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ HumanB::HumanB(std::string name)
     this->name = name;
     this->weapon = NULL;
 }
+
+HumanB::~HumanB() {}
 
 void HumanB::setWeapon(Weapon &weapon_ref)
 {

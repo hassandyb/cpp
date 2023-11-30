@@ -6,7 +6,7 @@
 #    By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/22 19:21:09 by hed-dyb           #+#    #+#              #
-#    Updated: 2023/11/30 13:41:29 by hed-dyb          ###   ########.fr        #
+#    Updated: 2023/11/30 15:06:05 by hed-dyb          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp Replace.cpp
 
-NAME = zombie
+NAME = replace
 
 OBJ = $(SRC:.cpp=.o)
 

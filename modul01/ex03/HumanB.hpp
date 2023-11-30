@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 10:31:19 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/22 10:31:50 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/30 14:51:44 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class HumanB
         Weapon *weapon;
     public:
         HumanB(std::string name);
+        ~HumanB();
         void setWeapon(Weapon &weapon_ref);
         void attack();
 
