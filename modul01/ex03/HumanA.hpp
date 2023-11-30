@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 10:34:06 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/22 10:34:10 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/29 19:55:16 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class HumanA
         std::string name;
         Weapon *weapon;
     public:
-    HumanA(std::string name, Weapon & weapn);
-    void attack() ;
+        HumanA(std::string name, Weapon & weapn);
+        void attack() ;
 
 
 };

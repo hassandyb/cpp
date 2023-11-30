@@ -5,32 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 18:57:28 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/30 14:23:04 by hed-dyb          ###   ########.fr       */
+/*   Created: 2023/11/29 19:42:20 by hed-dyb           #+#    #+#             */
+/*   Updated: 2023/11/29 19:42:23 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
-
+#include <iostream>
 
 
 int main ()
 {
-	Harl harl;
-	std::string level;
+    std::string str = "HI THIS IS BRAIN";
 
-	while(1)
-	{
-		std::cout << "Enter a level : ";
-		if(!std::getline(std::cin, level))
-			return 0;
-		if(level == "")
-		{
-			continue;
-		}
-			
-		harl.complain(level);
-	}
+    std::string *stringPTR = &str;
+    std::string &stringREF = str;
+
+    // printing the memory address
+
+    std::cout << &str << std::endl;
+    std::cout << stringPTR << std::endl;
+    std::cout << &stringREF << std::endl;
+
+    // printing the value
+    std::cout << std::endl;
+    std::cout << str << std::endl;
+    std::cout << *stringPTR << std::endl;
+    std::cout << stringREF << std::endl;
 }
-
-

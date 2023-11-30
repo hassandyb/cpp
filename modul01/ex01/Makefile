@@ -6,7 +6,7 @@
 #    By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/22 10:21:59 by hed-dyb           #+#    #+#              #
-#    Updated: 2023/11/22 10:22:05 by hed-dyb          ###   ########.fr        #
+#    Updated: 2023/11/26 16:15:19 by hed-dyb          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ $(NAME): $(OBJ) $(HEADER)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 %.o : %.cpp $(HEADER)
-	$(CC) $(FALGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean :
 	$(RM) $(OBJ)

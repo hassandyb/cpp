@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 10:29:20 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/22 10:29:29 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/11/29 19:49:37 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ Weapon::Weapon(std::string type)
 {
     this->setType(type);
 }
+
+Weapon::~Weapon() {}
 
 const std::string & Weapon::getType()
 {
