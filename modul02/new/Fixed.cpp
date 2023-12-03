@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/26 15:50:23 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/03 14:07:19 by hed-dyb          ###   ########.fr       */
+/*   Created: 2023/12/03 13:31:52 by hed-dyb           #+#    #+#             */
+/*   Updated: 2023/12/03 13:32:03 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,57 +14,28 @@
 
 const int Fixed::frac = 8;
 
-//constractors
 Fixed::Fixed() : value (0) 
 {
 	std::cout << "Default constructor called" << std::endl;
 };
 
-Fixed::Fixed(const int value) 
+Fixed::Fixed(const Fixed &fixed)
 {
-	std::cout << "Int constructor called" << std::endl;
-	this->value = value << frac;
-
+	std::cout << "Copy constructor called" << std::endl;
+	this->value = fixed.getRawBits();
 }
 
-Fixed::Fixed(const float value)
-{
-	std::cout << "Float constructor called" << std::endl;
-	this->value = roundf(value * (1 << frac));
-}
-
-
-//copy constractor
-Fixed::Fixed(const Fixed& fixed)
-{
-	std::cout << "Copy constractor called" << std::endl;
-	this->value = fixed.value;
-}
-
-
-//copy assignation operator
 Fixed & Fixed::operator=(const Fixed &fixed) 
 {
 	std::cout << "Copy Assignation operator called" << std::endl;
-	this->value = fixed.value;
+	this->value = fixed.getRawBits();
 	return *this;
 }
 
-
-//destractor
-Fixed::~Fixed()
+int Fixed::getRawBits(void ) const
 {
-	std::cout << "Destructor called" << std::endl;
-};
-
-float   Fixed::toFloat(void) const
-{
-    return ((float)value / (1 << frac));// value is int in the calssso we need to cast it to float
-}
-
-int     Fixed::toInt(void) const
-{
-	return (value >> frac);
+	std::cout << "getRawBits member function called" << std::endl;
+	return this->value;
 }
 
 void Fixed::setRawBits( int const raw )
@@ -73,15 +44,7 @@ void Fixed::setRawBits( int const raw )
 	this->value = raw;
 }
 
-int Fixed::getRawBits(void ) const
+Fixed::~Fixed()
 {
-	// std::cout << "getRawBits member function called" << std::endl;
-	return this->value;
-}
-
-std::ostream & operator<<(std::ostream &os, Fixed const & fixed)
-{
-
-	os  << fixed.toFloat();
-	return os;	
-}
+	std::cout << "Destructor called" << std::endl;
+};

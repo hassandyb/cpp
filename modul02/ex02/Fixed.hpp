@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:55:10 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/28 18:42:40 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/03 17:12:34 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,8 @@ class Fixed
 		Fixed operator / (const Fixed &fixed);
 
 		// increment/decrement operators: --------------------------------------------
-		Fixed operator ++ (int );
-		Fixed operator -- (int );
+		Fixed operator ++ (int );//i++
+		Fixed operator -- (int );//i--
 		Fixed & operator ++ (void );
 		Fixed & operator -- (void );
 		

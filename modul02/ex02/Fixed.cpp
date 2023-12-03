@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:55:13 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/28 19:22:34 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/03 18:14:10 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,12 @@ int Fixed::getRawBits(void ) const
 	return this->value;
 }
 
-std::ostream & operator <<(std::ostream &os, Fixed const & fixed)
+std::ostream & operator <<(std::ostream &os, Fixed const & fixed)// Overload operator
 {
+	// std::cout << " Overload operator << called" << std::endl;
+	// std::cout << "\n======= fixed.value: " << fixed.getRawBits() << std::endl;
 	os  << fixed.toFloat();
+	// std::cout << "\n======= fixed.value: " << fixed.getRawBits() << std::endl;
 	return os;	
 }
 
@@ -148,17 +151,13 @@ Fixed Fixed::operator - (const Fixed &fixed)
 	return (result);
 }
 
-
-
 Fixed Fixed::operator * (const Fixed &fixed) 
 {
     Fixed result;
-    float floatResult = this->toFloat() * fixed.toFloat();
+    float floatResult = this->toFloat() * fixed.toFloat();// the values are saved as fixed point, so we transform them to float/int using toFloat().
     result.value = (floatResult * (1 << frac));
     return result;
 }
-
-
 
 Fixed Fixed::operator / (const Fixed &fixed)
 {
@@ -170,8 +169,10 @@ Fixed Fixed::operator / (const Fixed &fixed)
 
 // increment/decrement operators: --------------------------------------------
 
+// why return by value : becayse temp is saved befor incremen/decrement. | and the actual obj is incremented/decremented.
 Fixed Fixed::operator ++ (int )	// i++ postfix increment
 {
+	// std::cout << "postfix increment   ++" << std::endl;
 	Fixed tmp(*this);
 	this->value++;
 	return tmp;
@@ -184,9 +185,15 @@ Fixed Fixed::operator -- (int )	//i-- postfix decrement
 	return tmp;
 }
 
+// we return by ref cause we did increment/decrement the actual obj the return it.
+// so we have a ref fron the actual obj. that incremented/decremented.
+
 Fixed & Fixed::operator ++ (void )	// ++i prefix increment
 {
+	// std::cout << "  ++  prefix increment" << std::endl;
+	// std::cout << "----------    this->value: " << this->value << std::endl;
 	this->value++;
+	// std::cout << "----------    this->value: " << this->value << std::endl;
 	return *this;
 }
 

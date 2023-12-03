@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 16:17:13 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/11/28 12:56:31 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/02 16:45:58 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class Fixed
 		Fixed();
 		Fixed(const int value);// const means  value cant be changed inside the function.
 		Fixed(const float value);
+
+		//-----------------------------
 		float toFloat(void) const;
 		int toInt(void) const;
 
