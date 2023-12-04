@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:55:13 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/03 18:14:10 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/04 15:52:04 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,7 @@ int Fixed::getRawBits(void ) const
 std::ostream & operator <<(std::ostream &os, Fixed const & fixed)// Overload operator
 {
 	// std::cout << " Overload operator << called" << std::endl;
-	// std::cout << "\n======= fixed.value: " << fixed.getRawBits() << std::endl;
 	os  << fixed.toFloat();
-	// std::cout << "\n======= fixed.value: " << fixed.getRawBits() << std::endl;
 	return os;	
 }
 
@@ -170,6 +168,7 @@ Fixed Fixed::operator / (const Fixed &fixed)
 // increment/decrement operators: --------------------------------------------
 
 // why return by value : becayse temp is saved befor incremen/decrement. | and the actual obj is incremented/decremented.
+
 Fixed Fixed::operator ++ (int )	// i++ postfix increment
 {
 	// std::cout << "postfix increment   ++" << std::endl;
@@ -208,6 +207,7 @@ Fixed & Fixed::operator -- (void )	// --i prefix decrement
 
 Fixed & Fixed::min(Fixed & f1, Fixed & f2)
 {
+	std::cout << "min function called" << std::endl;
 	if(f1.value < f2.value)
 		return f1;
 	return f2;
@@ -215,6 +215,7 @@ Fixed & Fixed::min(Fixed & f1, Fixed & f2)
 
 const Fixed & Fixed::min(const Fixed & f1, const Fixed & f2)
 {
+	std::cout << "const min function called" << std::endl;
 	if(f1.value < f2.value)
 		return f1;
 	return f2;
@@ -222,6 +223,7 @@ const Fixed & Fixed::min(const Fixed & f1, const Fixed & f2)
 
 Fixed & Fixed::max(Fixed & f1, Fixed & f2)
 {
+	std::cout << "max function called" << std::endl;
 	if(f1.value > f2.value)
 		return f1;
 	return f2;
@@ -229,7 +231,9 @@ Fixed & Fixed::max(Fixed & f1, Fixed & f2)
 
 const Fixed & Fixed::max(const Fixed & f1, const Fixed & f2)
 {
+	std::cout << "const max function called" << std::endl;
 	if(f1.value > f2.value)
 		return f1;
 	return f2;
 }
+

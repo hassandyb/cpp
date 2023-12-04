@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:55:10 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/03 17:12:34 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/04 15:57:18 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@
 class Fixed 
 {
 	private:
+
 		int					value;
 		static const int	frac;
 
@@ -56,6 +57,8 @@ class Fixed
 		Fixed(const Fixed& fixed);
 		Fixed& operator=(const Fixed &fixed);
 		~Fixed();
+
+
 
 		//------------------------------------------------------------------
 		int getRawBits(void ) const;
@@ -86,13 +89,14 @@ class Fixed
 
 		// min/max functions: --------------------------------------------
 		static Fixed & min(Fixed & f1, Fixed & f2);
-		static const Fixed & min(const Fixed & f1, const Fixed & f2);
+		const static Fixed & min(const Fixed & f1, const Fixed & f2);
 
 		static Fixed & max(Fixed & f1, Fixed & f2);
-		static const Fixed & max(const Fixed & f1, const Fixed & f2);
+		const static Fixed & max(const Fixed & f1, const Fixed & f2);
 
 		
 };
+
 std::ostream & operator<<(std::ostream & o, Fixed const & fixed);
 
 #endif
