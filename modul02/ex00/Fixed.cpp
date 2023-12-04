@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 11:13:00 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/03 15:56:38 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/04 18:58:41 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,16 @@ Fixed::Fixed(const Fixed &fixed)
 	this->value = fixed.getRawBits();
 }
 
-Fixed & Fixed::operator=(const Fixed &fixed) 
+
+Fixed & Fixed::operator=(const Fixed &fixed)// this pointer is the ojb we assignint new value , so once we change it , we return refernce of it. (no need for new ojb and doing passage by value!!)
 {
 	std::cout << "Copy Assignation operator called" << std::endl;
-	this->value = fixed.getRawBits();
+	if(this->value != fixed.getRawBits())
+		this->value = fixed.getRawBits();
 	return *this;
 }
+
+
 
 int Fixed::getRawBits(void ) const
 {

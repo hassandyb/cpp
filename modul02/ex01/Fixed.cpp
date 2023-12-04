@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 15:50:23 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/03 14:07:19 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/04 17:54:01 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ Fixed::~Fixed()
 
 float   Fixed::toFloat(void) const
 {
-    return ((float)value / (1 << frac));// value is int in the calssso we need to cast it to float
+    return ((float)value / (1 << frac));// value is int in the calss so we need to cast it to float
 }
 
 int     Fixed::toInt(void) const
