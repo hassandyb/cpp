@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:55:13 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/04 15:52:04 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/05 11:09:31 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -207,7 +207,7 @@ Fixed & Fixed::operator -- (void )	// --i prefix decrement
 
 Fixed & Fixed::min(Fixed & f1, Fixed & f2)
 {
-	std::cout << "min function called" << std::endl;
+	// std::cout << "min function called" << std::endl;
 	if(f1.value < f2.value)
 		return f1;
 	return f2;
@@ -215,7 +215,7 @@ Fixed & Fixed::min(Fixed & f1, Fixed & f2)
 
 const Fixed & Fixed::min(const Fixed & f1, const Fixed & f2)
 {
-	std::cout << "const min function called" << std::endl;
+	// std::cout << "const min function called" << std::endl;
 	if(f1.value < f2.value)
 		return f1;
 	return f2;
@@ -223,7 +223,7 @@ const Fixed & Fixed::min(const Fixed & f1, const Fixed & f2)
 
 Fixed & Fixed::max(Fixed & f1, Fixed & f2)
 {
-	std::cout << "max function called" << std::endl;
+	// std::cout << "max function called" << std::endl;
 	if(f1.value > f2.value)
 		return f1;
 	return f2;
@@ -231,7 +231,7 @@ Fixed & Fixed::max(Fixed & f1, Fixed & f2)
 
 const Fixed & Fixed::max(const Fixed & f1, const Fixed & f2)
 {
-	std::cout << "const max function called" << std::endl;
+	// std::cout << "const max function called" << std::endl;
 	if(f1.value > f2.value)
 		return f1;
 	return f2;

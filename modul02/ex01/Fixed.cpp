@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 15:50:23 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/04 17:54:01 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/05 13:06:27 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ Fixed::Fixed(const int value)
 {
 	std::cout << "Int constructor called" << std::endl;
 	this->value = value << frac;
-
 }
 
 Fixed::Fixed(const float value)
@@ -37,16 +36,16 @@ Fixed::Fixed(const float value)
 //copy constractor
 Fixed::Fixed(const Fixed& fixed)
 {
-	std::cout << "Copy constractor called" << std::endl;
-	this->value = fixed.value;
+	std::cout << "Copy constructor called" << std::endl;
+	*this = fixed;// we could do this->value = fixed->value, but we need to call copy assignemt operator todesplay in fifth line.
 }
 
 
 //copy assignation operator
 Fixed & Fixed::operator=(const Fixed &fixed) 
 {
-	std::cout << "Copy Assignation operator called" << std::endl;
-	this->value = fixed.value;
+	std::cout << "Copy assignation operator called" << std::endl;
+	this->value = fixed.getRawBits();
 	return *this;
 }
 
@@ -69,7 +68,7 @@ int     Fixed::toInt(void) const
 
 void Fixed::setRawBits( int const raw )
 {
-	std::cout << "setRawBits member function called" << std::endl;
+	// std::cout << "setRawBits member function called" << std::endl;
 	this->value = raw;
 }
 

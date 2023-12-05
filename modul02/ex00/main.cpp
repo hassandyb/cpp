@@ -6,17 +6,19 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 11:12:06 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/04 18:51:53 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/04 20:47:40 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 
-int main( void ) 
+int main() 
 {
 	Fixed a;
-	Fixed b( a );
+	
+
+	Fixed b(a);
 	Fixed c;
 	c = b;
 
