@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:54:46 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/05 11:08:39 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/05 14:43:15 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,13 @@
 
 int main( void ) 
 {
-	Fixed a;
+	Fixed a; 
 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );// const ==> 
 
 
 
-	
+	// << calls tofloat so we should expect float values
+
 	std::cout << a << std::endl; // inside a value = 0 , and << does 0/156 = 0;
 	std::cout << ++a << std::endl;// inside a value = 1 , but << opertaor divide 1 by 256 and print it. 
 	std::cout << a << std::endl;// value = 1, << does again 1/256 = 0.00390625;

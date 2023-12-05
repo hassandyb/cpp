@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:55:13 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/05 11:09:31 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/05 14:35:55 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Fixed::Fixed(const float value)
 Fixed::Fixed(const Fixed& fixed)
 {
 	// std::cout << "Copy constractor called" << std::endl;
-	this->value = fixed.value;
+	*this = fixed;
 }
 
 
