@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 16:16:18 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/08 18:49:40 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/09 13:19:43 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,19 +53,42 @@ ClapTrap::ClapTrap(std::string name) : name(name), hit_points(10), energy_points
 
 void ClapTrap::attack(const std::string & target)
 {
-	std::cout << "ClapTrap " << this->name;
-	std::cout << " attacks " << target;
-	std::cout << ", causing " << 
+	if(this->hit_points > 0 && this->energy_points > 0)
+	{
+		std::cout << "ClapTrap" << this->name << " attacks ";
+		std::cout << target << ", causing " << this->attack_damage;
 
-	hit_points = hit_points - 1;
+		energy_points = energy_points - 1;
+	}
+	else
+		std::cout << "ClapTrap" << this->name << " cant attack ";
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
+	if(hit_points > 0)
+	{
+		std::cout << "ClapTrap " << this->name << " takes " << amount << " damage";
 
+		hit_points = hit_points - amount;
+
+		if(hit_points < 0)
+			hit_points = 0;
+	}
+	else // case hit_points == 0
+		std::cout << "ClapTrap " << this->name << " is already dead" <<std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
+	if(hit_points > 0 && energy_points > 0)
+	{
+		std::cout << "ClapTrap " << this->name << " is repaired by " << amount;
+		hit_points = hit_points + amount;
+		energy_points = energy_points - 1;
+	}
+	else // case hit_points == 0 or energy_points <= 0
+		std::cout << "ClapTrap " << this->name << " cant be repaired" << std::endl;
+
 
 }
