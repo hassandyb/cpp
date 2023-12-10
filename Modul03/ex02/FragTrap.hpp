@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 13:26:11 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/10 14:05:25 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/10 16:11:55 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ class FragTrap : public ClapTrap
 		void highFivesGuys(void);
 		
 		
-}
+};
 
 #endif
