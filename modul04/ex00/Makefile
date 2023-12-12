@@ -6,11 +6,11 @@
 #    By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 14:11:13 by hed-dyb           #+#    #+#              #
-#    Updated: 2023/12/11 14:56:16 by hed-dyb          ###   ########.fr        #
+#    Updated: 2023/12/12 13:52:39 by hed-dyb          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-HEADER = Animal.hpp Dog.hpp
+HEADER = Animal.hpp Dog.hpp Cat.hpp
 
 NAME = animal
 
@@ -20,7 +20,7 @@ RM = rm -f
 
 Flags = -wall -Werror -wextra -std=c++98
 
-SRC = main.cpp Animal.cpp Dog.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:38:06 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/11 14:43:18 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/12 15:54:08 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // Canonical form : ---------------------------------------------
 
-Animal::Animal() : type("Default_name")
+Animal::Animal() : type("Default_Animal")
 {
 	std::cout << "Animal default constructor called" << std::endl;
 }
@@ -46,7 +46,23 @@ Animal::Animal(std::string type) : type(type)
 
 }
 
+// ex01 ---------------------------------------------------------
 
+
+std::string Animal::getType() const
+{
+	return this->type;
+}
+
+void Animal::setType(std::string type) 
+{
+	this->type = type; 
+}
+
+void Animal::makeSound() const
+{
+	std::cout << "Animal sound" << std::endl;
+}
 
 
 
