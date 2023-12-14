@@ -11,7 +11,8 @@ public:
         data = new int(val);
     }
 
-    DeepCopyExample(const DeepCopyExample& other) {
+    DeepCopyExample(const DeepCopyExample& other)
+     {
         data = new int(*other.data);
     }
 

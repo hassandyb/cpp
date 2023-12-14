@@ -3,17 +3,20 @@
 
 #include <iostream>
 
-class ShallowCopyExample {
-public:
-    int* data;
+class ShallowCopyExample 
+{
+    public:
+        int* data;
 
-    ShallowCopyExample(int val) {
-        data = new int(val);
-    }
+        ShallowCopyExample(int val) 
+        {
+            data = new int(val);
+        }
 
-    ~ShallowCopyExample() {
-        delete data;
-    }
+        ~ShallowCopyExample() 
+        {
+            delete data;
+        }
 };
 
 int main() {
