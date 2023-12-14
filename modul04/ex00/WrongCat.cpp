@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:54:36 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/12 18:42:26 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/14 17:16:30 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ WrongCat::~WrongCat()
 
 // the rest -------------------------------------
 
-WrongCat::WrongCat(std::string type) : WrongAnimal(type)
+WrongCat::WrongCat(const std::string & type) : WrongAnimal(type)
 {
 	std::cout << "WrongCat parameterized constructor called" << std::endl;
 }

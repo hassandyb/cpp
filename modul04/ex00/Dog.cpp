@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:20:43 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/12 18:40:58 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/14 17:15:33 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Dog::~Dog()
 
 // rest ---------------------------------------
 
-Dog::Dog(std::string type) : Animal(type)
+Dog::Dog(const std::string & type) : Animal(type)
 {
 	std::cout << "Dog parameterized constuctor called" << std::cout;
 }

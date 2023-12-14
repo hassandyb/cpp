@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:38:06 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/12 15:54:08 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/14 17:14:21 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,11 @@ Animal::~Animal()
 
 // ex00 ---------------------------------------------------------
 
-Animal::Animal(std::string type) : type(type)
+Animal::Animal(const std::string & type) : type(type)
 {
 	std::cout << "Animal parameterized constructor called" << std::endl;
 
 }
-
-// ex01 ---------------------------------------------------------
-
 
 std::string Animal::getType() const
 {
