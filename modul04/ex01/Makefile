@@ -6,7 +6,7 @@
 #    By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 14:11:13 by hed-dyb           #+#    #+#              #
-#    Updated: 2023/12/14 22:25:46 by hed-dyb          ###   ########.fr        #
+#    Updated: 2023/12/15 15:26:19 by hed-dyb          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = c++
 
 RM = rm -f
 
-Flags = -wall -Werror -wextra -std=c++98
+Flags = -wall -Werror -wextra -std=c++98 #-fsanitize=address
 
 SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 

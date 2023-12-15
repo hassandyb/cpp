@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:38:25 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/14 17:39:37 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/15 15:26:12 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,44 +14,61 @@
 #include "Cat.hpp"
 #include "WrongCat.hpp"
 
+
+void ft_leaks()
+{
+	system("leaks animal");
+}
+
+// first test ----------------------------------------------------
+
 int main() 
 {
-	{
-		// const Animal* meta = new Animal();
-		// const Animal* j = new Dog();
-		// const Animal* i = new Cat();
+	ft_leaks();
+	const Animal* j;
+	const Animal* i;
 
-		// std::cout << std::endl;
+	std::cout << std::endl << "---------------------" << std::endl << std::endl;
 
-		// std::cout << j->getType() << " " << std::endl; 
-		// std::cout << i->getType() << " " << std::endl; 
+	j = new Dog();
+	
+	std::cout << std::endl << "---------------------" << std::endl << std::endl;
 
-		// std::cout << std::endl;
+	i = new Cat();
 
-		
-		// i->makeSound(); //will output the cat sound! j->makeSound();
-		// j->makeSound();
-		// meta->makeSound(); 
+	std::cout << std::endl << "---------------------" << std::endl << std::endl;
 
-		// std::cout << std::endl;
-		
-		// delete meta;
-		// delete j;
-		// delete i;
-		// return 0; 
-	}
-	{
-		const WrongAnimal* meta = new WrongAnimal();
-		const WrongAnimal* i = new WrongCat();
+	delete j;//should not create a leak delete i;
+	
+	std::cout << std::endl << "---------------------" << std::endl << std::endl;
+	
+	delete i;
 
-		std::cout << i->getType() << " " << std::endl;
-
-		i->makeSound();
-		meta->makeSound();
-
-		delete meta;
-		delete i;
-		return 0;
-	}
+	return 0; 
 }
+
+// second test ----------------------------------------------------
+
+// int main ()
+// {
+// 	ft_leaks();
+// 	 Animal *Animals[10];
+
+// 	for (int i = 0; i < 10; i++)
+// 	{
+// 		if(i % 2 == 0)
+// 			Animals[i] = new Dog();
+// 		else
+// 			Animals[i] = new Cat();
+// 	}
+// 	for (int i = 0; i < 10; i++)
+// 	{
+// 		Animals[i]->makeSound();
+// 	}
+// 	// for(int i = 0; i < 10; i++)
+// 	// {
+// 	// 	delete Animals[i];
+// 	// }
+	
+// }
 
