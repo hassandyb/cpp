@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:56:27 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/16 11:34:03 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/16 14:19:21 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Cure::~Cure()
 
 AMateria* Cure::clone() const
 {
-	Cure *newcopy = new Cure(*this);//call the copy constructor of Cure
+	AMateria *newcopy = new Cure(*this);//call the copy constructor of Cure
 	return newcopy;
 }
 
