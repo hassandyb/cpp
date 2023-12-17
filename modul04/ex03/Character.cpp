@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 14:45:50 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/16 16:17:53 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/17 16:05:25 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Character::~Character()
 
 }
 
-// The rest : ---------------------------------------------------
+// The ICharacter interface functions : ---------------------------------------------------
 
 std::string const & Character::getName() const
 {
@@ -55,12 +55,16 @@ std::string const & Character::getName() const
 void Character::equip(AMateria * m)
 {
 	for(int i = 0; i < 4; i++)
+	{
 		if(this->inventory[i] == NULL)
 		{
 			this->inventory[i] = m;
-			std::cout << "Character " << this->name << " equipped with " << m->getType() << std::endl; 
+			std::cout << "The Amateria " << m->getType() << " has been equipped inside ";
+			std::cout << this->name << "'s inventory" << std::endl;
+			return ;
 		}
-	std::cout << "Character " << this->name << " can't equip " << m->getType() << std::endl;
+		std::cout << "The inventory is full" << std::endl;
+	}
 }
 
 void Character::unequip(int idx)
@@ -68,20 +72,22 @@ void Character::unequip(int idx)
 	if(this->inventory[idx] != NULL)
 	{
 		this->inventory[idx] = NULL;
-		std::cout << "Character " << this->name << " unequipped" << std::endl;
+		std::cout << "The Amateria " << this->inventory[idx]->getType() << "has been unequipped." << std::endl;
 	}
 	else
-		std::cout << "Character " << this->name << " can't unequip" << std::endl;
+		std::cout << "The inventory of the index " << idx << " is empty." << std::endl;
 }
 
 void Character::use(int idx, ICharacter & target)
 {
 	if(this->inventory[idx] != NULL)
 	{
-		// something
+		this->inventory[idx]->use(target);
+		//inside inventory there is Amateria pointers obj
+		// now we call the use function of that object.
 	}
 	else
-		std::cout << "Character " << this->name << " cant use" << std::endl;
+		std::cout << "The inventory of the index " << idx << " is empty." << std::endl;
 }
 
 

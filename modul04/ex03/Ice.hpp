@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:56:05 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/16 14:20:05 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/17 15:09:40 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ class Ice : public AMateria
 		~Ice();
 
 		virtual AMateria * clone() const;
-
-		// virtual void        use(ICharacter& target);
+		virtual void use(ICharacter& target);
 };
 
 #endif

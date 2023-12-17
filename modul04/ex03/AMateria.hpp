@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:30:49 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/16 11:17:00 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/17 15:20:01 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define AMATERIA_HPP
 
 #include <iostream>
+#include "ICharacter.hpp"
 
 class AMateria
 {
@@ -32,6 +33,7 @@ class AMateria
 		
 		std::string const & getType() const; 
 		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter & target);
 };
 
 

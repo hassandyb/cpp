@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:30:37 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/16 10:55:04 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/17 15:21:32 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 AMateria::AMateria() : type("default_amateria")
 {
-	std::cout << "AMateria constructor called" << std::cout;
+	std::cout << "AMateria constructor called" << std::endl;
 }
 
 AMateria::AMateria(AMateria const & other)
@@ -53,4 +53,8 @@ std::string const & AMateria::getType() const
 	return this->type;
 }
 
+void use(ICharacter & target)
+{
+	std::cout << "AMateria use function called" << std::endl;
+}
 

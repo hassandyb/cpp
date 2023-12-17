@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 19:50:04 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/17 16:09:07 by hed-dyb          ###   ########.fr       */
+/*   Created: 2023/12/17 16:21:58 by hed-dyb           #+#    #+#             */
+/*   Updated: 2023/12/17 16:22:00 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cure.hpp"
-#include "Ice.hpp"
+#ifndef MATERIASOURCE_HPP
+#define MATERIASOURCE_HPP
 
 
-int main ()
-{
-	{
-		Cure *c = new 
-	}
-}
+#endif

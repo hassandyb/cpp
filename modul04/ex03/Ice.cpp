@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:55:52 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/16 14:19:14 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/17 15:01:01 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,16 @@ Ice::~Ice()
 
 
 // The rest : ------------------------------------------------------------------
+
 AMateria * Ice::clone() const
 {
 	AMateria *newcopy = new Ice(*this); // call the copy constructor of Ice
 	return newcopy;
 }
 
+void use(ICharacter& target)
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl; 
+}
 
 

@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:56:27 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/16 14:19:21 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/17 14:37:54 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,12 @@ AMateria* Cure::clone() const
 	AMateria *newcopy = new Cure(*this);//call the copy constructor of Cure
 	return newcopy;
 }
+
+void	use(ICharacter& target)
+{
+	std::cout << "* heals " << target.getName() << "'s Wounds *" << std::endl;
+}
+
+
 
 

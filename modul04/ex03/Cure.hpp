@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:56:39 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/16 14:19:53 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/17 15:09:36 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class Cure : public AMateria
 		Cure(const Cure & other);
 		Cure & operator=(const Cure & other);
 		~Cure();
-	virtual AMateria * clone() const;
 
-	// virtual void        use(ICharacter& target);
+	virtual AMateria * clone() const;
+	virtual void	use(ICharacter& target);
 
 };
 #endif
