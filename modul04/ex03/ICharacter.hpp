@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 14:25:30 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/16 14:45:19 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/18 15:11:21 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define ICHARACTER_HPP
 
 #include "AMateria.hpp"
-
 
 class ICharacter
 {

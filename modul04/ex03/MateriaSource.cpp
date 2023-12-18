@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:21:08 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/18 11:42:44 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/18 17:59:19 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 MateriaSource::MateriaSource()
 {
-	// std::cout << "materiaSource constructor called" << std::endl;
 	for(int i = 0; i < 4; i++)
 	{
 		materias[i] = NULL;
@@ -25,18 +24,19 @@ MateriaSource::MateriaSource()
 
 MateriaSource::MateriaSource(const MateriaSource & other)
 {
-	// std::cout << "MateriaSource copy constructor called" << std::endl;
 	*this = other;
 }
 
 MateriaSource & MateriaSource::operator=(const MateriaSource & other)
 {
-	// std::cout << "MateriaSource copy assignement operator called" << std::endl;
+
 	if(this != &other)
 	{
 		for(int i = 0; i < 4; i++)
 		{
-			materias[i] = other.materias[i];
+			if(materias[i] != NULL)
+				delete materias[i];
+			materias[i] = other.materias[i]->clone();
 		}
 	}
 	return *this;
@@ -44,7 +44,12 @@ MateriaSource & MateriaSource::operator=(const MateriaSource & other)
 
 MateriaSource::~MateriaSource()
 {
-	// std::cout << "MateriaSource destructor called" << std::endl;
+	for(int i = 0; i < 4; i++)
+	{
+		if(materias[i] != NULL)
+			delete materias[i];
+	}
+
 
 }
 

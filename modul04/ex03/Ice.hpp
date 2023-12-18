@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:56:05 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/17 15:09:40 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/18 15:12:12 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define ICE_HPP
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
+
 class Ice : public AMateria
 {
 	public :

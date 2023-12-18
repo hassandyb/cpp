@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:38:17 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/14 17:14:06 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/18 19:26:47 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,11 @@
 #include <string>
 
 
-
 class Animal
 {
 	protected:
 		std::string type;
 	public:
-
 		Animal();
 		Animal(const Animal & other);
 		Animal & operator=(const Animal & other);
