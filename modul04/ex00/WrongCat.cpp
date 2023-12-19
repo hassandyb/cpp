@@ -6,13 +6,14 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:54:36 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/14 17:16:30 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 14:27:39 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
 // Canonical form -----------------------------
+
 WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
 	std::cout << "WrongCat default constructor called" << std::endl;

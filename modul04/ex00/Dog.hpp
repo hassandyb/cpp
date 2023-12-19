@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:20:54 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/14 17:15:09 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 13:35:23 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Dog : public Animal
 		Dog & operator=(const Dog & other);
 		~Dog();
 
-		Dog(const std::string & type);
+		
 
 		void makeSound() const;
 };

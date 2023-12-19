@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 13:30:01 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/14 17:14:53 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 13:35:49 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,6 @@ Cat::~Cat()
 
 // rest -----------------------------------------------------------------------
 
-Cat::Cat(const std::string & type) : Animal(type)
-{
-	std::cout << "Cat parameterized constructor called" << std::endl;
-}
 
 void	Cat::makeSound() const
 {

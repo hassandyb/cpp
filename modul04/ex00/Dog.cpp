@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:20:43 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/14 17:15:33 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 14:02:41 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,7 @@ Dog::~Dog()
 	std::cout << "Dog destructor called" << std::endl;
 }
 
-
 // rest ---------------------------------------
-
-Dog::Dog(const std::string & type) : Animal(type)
-{
-	std::cout << "Dog parameterized constuctor called" << std::cout;
-}
 
 void Dog::makeSound() const
 {
