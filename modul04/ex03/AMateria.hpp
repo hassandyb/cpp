@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:30:49 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/18 17:48:50 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 16:13:54 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ class AMateria
 		AMateria();
 		AMateria(AMateria const & other);
 		AMateria & operator=(AMateria const & other);
-		virtual ~AMateria();//if you don't make it virtual, you will have a memory leak and the destructor of the child class will not be called
-
+		virtual ~AMateria();
 
 		AMateria(std::string const & type);
 		

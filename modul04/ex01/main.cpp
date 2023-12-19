@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:38:25 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/15 15:26:12 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 15:38:38 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,55 +20,61 @@ void ft_leaks()
 	system("leaks animal");
 }
 
-// first test ----------------------------------------------------
 
-int main() 
-{
-	ft_leaks();
-	const Animal* j;
-	const Animal* i;
-
-	std::cout << std::endl << "---------------------" << std::endl << std::endl;
-
-	j = new Dog();
-	
-	std::cout << std::endl << "---------------------" << std::endl << std::endl;
-
-	i = new Cat();
-
-	std::cout << std::endl << "---------------------" << std::endl << std::endl;
-
-	delete j;//should not create a leak delete i;
-	
-	std::cout << std::endl << "---------------------" << std::endl << std::endl;
-	
-	delete i;
-
-	return 0; 
-}
-
-// second test ----------------------------------------------------
+// deep/shallow ----------------------------------------------------
 
 // int main ()
 // {
-// 	ft_leaks();
-// 	 Animal *Animals[10];
-
-// 	for (int i = 0; i < 10; i++)
+// 		Dog basic;
 // 	{
-// 		if(i % 2 == 0)
-// 			Animals[i] = new Dog();
-// 		else
-// 			Animals[i] = new Cat();
+// 	Dog tmp = basic;
 // 	}
-// 	for (int i = 0; i < 10; i++)
-// 	{
-// 		Animals[i]->makeSound();
-// 	}
-// 	// for(int i = 0; i < 10; i++)
-// 	// {
-// 	// 	delete Animals[i];
-// 	// }
-	
 // }
+
+// first test : Handling leaks ----------------------------------------------------
+
+// int main() 
+// {
+// 	atexit(ft_leaks);
+// 	const Animal* j;
+// 	const Animal* i;
+// 	j = new Dog();
+
+// 	i = new Cat();
+
+// 	delete j;
+// 	delete i;
+
+// 	return 0; 
+// }
+
+// second test ----------------------------------------------------
+
+int main ()
+{
+	// atexit(ft_leaks);
+	Animal *Animals[10];
+
+	for (int i = 0; i < 5; i++)
+		Animals[i] = new Dog();
+
+	for (int i = 5; i < 10; i++)
+		Animals[i] = new Cat();
+	
+			
+
+	// calling makesould function :
+	for (int i = 0; i < 10; i++)
+	{
+		Animals[i]->makeSound();
+	}
+
+	// deleting the pointer i alocated periviously
+
+	for(int i = 0; i < 10; i++)
+	{
+		delete Animals[i];
+	}
+	
+}
 

@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 13:30:11 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/14 20:12:58 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 15:06:50 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include "Animal.hpp"
 #include "Brain.hpp"
+
+
 class Cat : public Animal
 {
 	private :

@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:21:58 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/17 17:56:18 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 16:12:17 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ class MateriaSource : public IMateriaSource
 
 		void learnMateria(AMateria *m);
 		AMateria* createMateria(std::string const & type);
-
-		// AMateria * getMateria(std::string const & type)
 };
 
 #endif

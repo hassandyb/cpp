@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:38:06 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/14 17:14:21 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 15:50:02 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Animal::~Animal()
 	std::cout << "Animal destructor called" << std::endl;
 }
 
-// ex00 ---------------------------------------------------------
+// the rest ---------------------------------------------------------
 
 Animal::Animal(const std::string & type) : type(type)
 {
@@ -55,11 +55,4 @@ void Animal::setType(std::string type)
 {
 	this->type = type; 
 }
-
-void Animal::makeSound() const
-{
-	std::cout << "Animal sound" << std::endl;
-}
-
-
 

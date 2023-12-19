@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:38:25 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/15 19:47:42 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 15:55:18 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int main ()
 	
 
 	// you cant simply obj of animal
+	
 	// const Animal* meta = new Animal();
-	// meta->makeSound(); 
-	// delete meta;
+
 
 
 	delete j;
