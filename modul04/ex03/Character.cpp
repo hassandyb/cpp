@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 14:45:50 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/19 18:14:29 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 18:55:54 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ Character::Character(std::string const & name) : name(name)
 
 Character::Character(const Character & other)
 {
+	for(int i = 0; i < 4; i++)
+		this->inventory[i] = NULL;
 	*this = other;
 }
 

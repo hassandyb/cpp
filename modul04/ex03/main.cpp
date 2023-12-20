@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 19:50:04 by hed-dyb           #+#    #+#             */
-/*   Updated: 2023/12/19 18:23:10 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2023/12/19 18:55:32 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,30 +132,44 @@ int main ()
 		// delete src;
 	}
 	{
-		IMateriaSource* src = new MateriaSource(); 
+		// IMateriaSource* src = new MateriaSource(); 
 	
 
 
-		src->learnMateria(new Ice()); 
+		// src->learnMateria(new Ice()); 
 
-		ICharacter* me = new Character("me");
+		// ICharacter* me = new Character("me");
 
-		// NULL is protected
-		me->equip(NULL);
+		// // NULL is protected
+		// me->equip(NULL);
 
-		//more than 4 is protcted
-		AMateria *tmp;
-		tmp = src->createMateria("ice");
-		me->equip(tmp);
-		tmp = src->createMateria("ice");
-		me->equip(tmp);
-		tmp = src->createMateria("ice");
-		me->equip(tmp);
-		tmp = src->createMateria("ice");
-		me->equip(tmp);
-		tmp = src->createMateria("ice");
-		me->equip(tmp);
+		// //more than 4 is protcted
+		// AMateria *tmp;
+		// tmp = src->createMateria("ice");
+		// me->equip(tmp);
+		// tmp = src->createMateria("ice");
+		// me->equip(tmp);
+		// tmp = src->createMateria("ice");
+		// me->equip(tmp);
+		// tmp = src->createMateria("ice");
+		// me->equip(tmp);
+		// tmp = src->createMateria("ice");
+		// me->equip(tmp);
 
+	}
+
+	{
+		IMateriaSource* src = new MateriaSource();
+		src->learnMateria(new Ice());
+		src->learnMateria(new Cure());
+
+		Character me("me");
+		AMateria *tmp = src->createMateria("ice");
+		me.equip(tmp);
+		AMateria *tmp1 = src->createMateria("ice");
+		me.equip(tmp1);
+		Character bob(me);
+		bob.use(0, me);
 	}
 		
 }
